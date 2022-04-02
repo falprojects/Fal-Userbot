@@ -155,7 +155,7 @@ PMPERMIT_TEXT = os.environ.get("PMPERMIT_TEXT", None)
 
 # Custom Pmpermit pic
 PMPERMIT_PIC = os.environ.get(
-    "PMPERMIT_PIC") or "https://telegra.ph/file/276d22aac9f400898cd27.jpg"
+    "PMPERMIT_PIC") or "https://telegra.ph/file/05dba38c6d7d79cea533e.jpg"
 
 # Bleep Blop, this is a bot ;)
 PM_AUTO_BAN = sb(os.environ.get("PM_AUTO_BAN", "False"))
@@ -180,9 +180,9 @@ GITHUB_ACCESS_TOKEN = os.environ.get("GITHUB_ACCESS_TOKEN", None)
 # Custom (forked) repo URL for updater.
 UPSTREAM_REPO_URL = os.environ.get(
     "UPSTREAM_REPO_URL",
-    "https://github.com/muhammadrizky16/Kyy-Userbot")
+    "https://github.com/falprojects/Fal-Userbot")
 UPSTREAM_REPO_BRANCH = os.environ.get(
-    "UPSTREAM_REPO_BRANCH", "Kyy-Userbot")
+    "UPSTREAM_REPO_BRANCH", "Fal-Userbot")
 
 # Console verbose logging
 CONSOLE_LOGGER_VERBOSE = sb(os.environ.get("CONSOLE_LOGGER_VERBOSE", "False"))
@@ -253,13 +253,13 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kyyalive
-KYY_TEKS_KUSTOM = os.environ.get("KYY_TEKS_KUSTOM", "I'am Using Kyy-Userbot✨")
+FAL_TEKS_KUSTOM = os.environ.get("FAL_TEKS_KUSTOM", "I'am Using Fal-Userbot✨")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
 
 # Default .alive Name
-ALIVE_NAME = os.environ.get("ALIVE_NAME", "Kyy")
+ALIVE_NAME = os.environ.get("ALIVE_NAME", "Fal")
 
 # Time & Date - Country and Time Zone
 COUNTRY = str(os.environ.get("COUNTRY", "ID"))
@@ -276,7 +276,7 @@ BITLY_TOKEN = os.environ.get(
     "BITLY_TOKEN") or "o_1fpd9299vp"
 
 # Bot Name
-TERM_ALIAS = os.environ.get("TERM_ALIAS", "Kyy-Userbot")
+TERM_ALIAS = os.environ.get("TERM_ALIAS", "Fal-Userbot")
 
 # Bot Version
 BOT_VER = os.environ.get("BOT_VER", "3.1.5")
@@ -289,12 +289,11 @@ S_PACK_NAME = os.environ.get("S_PACK_NAME", None)
 
 # Default .alive Logo
 ALIVE_LOGO = os.environ.get(
-    "ALIVE_LOGO") or "https://telegra.ph/file/276d22aac9f400898cd27.jpg"
+    "ALIVE_LOGO") or "https://telegra.ph/file/05dba38c6d7d79cea533e.jpg">
 
 # Default .helpme Logo
 INLINE_PIC = os.environ.get(
-    "INLINE_PIC") or "https://telegra.ph/file/276d22aac9f400898cd27.jpg"
-
+    "INLINE_PIC") or "https://telegra.ph/file/05dba38c6d7d79cea533e.jpg"
 # Default emoji help
 EMOJI_HELP = os.environ.get("EMOJI_HELP") or "✘"
 
@@ -411,7 +410,7 @@ for binary, path in binaries.items():
 if STRING_SESSION:
     session = StringSession(str(STRING_SESSION))
 else:
-    session = "Kyy-Userbot"
+    session = "Fal-Userbot"
 try:
     bot = TelegramClient(
         session=session,
@@ -449,14 +448,14 @@ with bot:
         bot.loop.run_until_complete(checking())
     except BaseException:
         LOGS.info(
-            "Join Support Group @NastySupportt and Channel @NastyProject to see the updates of userbot"
+            "Join Support Channel @fallprojects to see the updates of userbot"
             "Don't Leave")
         quit(1)
 
 
 async def update_restart_msg(chat_id, msg_id):
     message = (
-        f"**Kyy-Userbot v{BOT_VER} is back up and running!**\n\n"
+        f"**Fal-Userbot v{BOT_VER} is back up and running!**\n\n"
         f"**Telethon:** {version.__version__}\n"
         f"**Python:** {python_version()}\n"
         f"**User:** {owner}"
@@ -560,7 +559,7 @@ with bot:
         asst = tgbot.get_me()
         botusername = asst.username
         logo = ALIVE_LOGO
-        kyylogo = ALIVE_LOGO
+        fallogo = ALIVE_LOGO
         cmd = CMD_HANDLER
         tgbotusername = BOT_USERNAME
         BTN_URL_REGEX = re.compile(
@@ -570,7 +569,7 @@ with bot:
         main_help_button = [
             [
                 Button.inline("ᴍᴏᴅᴜʟᴇs", data="reopen"),
-                Button.inline("ᴠᴄ ᴘʟᴜɢɪɴ", data="kyy_inline"),
+                Button.inline("ᴠᴄ ᴘʟᴜɢɪɴ", data="fal_inline"),
             ],
             [
                 Button.url("sᴇᴛᴛɪɴɢs", f"t.me/{botusername}"),
@@ -659,10 +658,10 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
-                    file=kyylogo,
+                    file=fallogo,
                     buttons=buttons,
                     link_preview=False,
                 )
@@ -678,7 +677,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=kyylogo,
@@ -694,33 +693,33 @@ with bot:
             builder = event.builder
             result = None
             query = event.text
-            if event.query.user_id == uid and query.startswith("@KyyUserbot"):
+            if event.query.user_id == uid and query.startswith("@FalUserbot"):
                 buttons = paginate_help(0, dugmeler, "helpme")
                 result = await event.builder.photo(
-                    file=kyylogo,
+                    file=fallogo,
                     link_preview=False,
-                    text=f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
                 result = builder.article(
                     title="Repository",
-                    description="Repository Kyy - Userbot",
-                    url="https://t.me/NastySupportt",
+                    description="Repository Fal - Userbot",
+                    url="https://t.me/fallprojects",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text="**Kyy-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [Kyy-Ex](https://t.me/IDnyaKosong)\n✣ **sᴜᴘᴘᴏʀᴛ :** @NastySupportt\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
+                    text="**Fal-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ ʀᴇᴘᴏ :** [nonem](https://t.me/falprojects)\n✣ **sᴜᴘᴘᴏʀᴛ :** @fallprojects\n✣ **ʀᴇᴘᴏsɪᴛᴏʀʏ :** [Fal-Userbot](https://github.com/falprojects/Fal-Userbot)\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
-                                "ɢʀᴏᴜᴘ",
-                                "https://t.me/NastySupportt"),
+                                "channel",
+                                "https://t.me/fallprojects"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/muhammadrizky16/Kyy-Userbot"),
+                                "https://github.com/falprojects/Fal-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -759,23 +758,23 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ ҡʏʏ-υѕєявσт ✨",
-                    description="Kyy - Userbot | Telethon",
-                    url="https://t.me/NastyProject",
+                    title="✨ fal-userbot ✨",
+                    description="Fal - Userbot | Telethon",
+                    url="https://t.me/fallprojects",
                     thumb=InputWebDocument(
                         ALIVE_LOGO,
                         0,
                         "image/jpeg",
                         []),
-                    text=f"**Kyy-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @NastyProject\n➖➖➖➖➖➖➖➖➖➖",
+                    text=f"**Fal-Userbot**\n➖➖➖➖➖➖➖➖➖➖\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴀssɪsᴛᴀɴᴛ:** {tgbotusername}\n➖➖➖➖➖➖➖➖➖➖\n**ᴜᴘᴅᴀᴛᴇs:** @fallprojects\n➖➖➖➖➖➖➖➖➖➖",
                     buttons=[
                         [
                             custom.Button.url(
-                                "ɢʀᴏᴜᴘ",
-                                "https://t.me/NastySupportt"),
+                                "channel",
+                                "https://t.me/fallprojects"),
                             custom.Button.url(
                                 "ʀᴇᴘᴏ",
-                                "https://github.com/muhammadrizky16/Kyy-Userbot"),
+                                "https://github.com/falprojects/Fal-Userbot"),
                         ],
                     ],
                     link_preview=False,
@@ -808,10 +807,10 @@ with bot:
             )
         )
         async def on_plug_in_callback_query_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Kyy-Userbot
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Fal-Userbot
                 # https://t.me/TelethonChat/115200
                 await event.edit(
-                    file=kyylogo,
+                    file=fallogo,
                     link_preview=True,
                     buttons=main_help_button)
 
@@ -821,13 +820,13 @@ with bot:
             )
         )
         async def gback_handler(event):
-            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Kyy-Userbot
+            if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Fal-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**✨ ҡʏʏ-υѕєявσт ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**")
+                    f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**")
                 await event.edit(
                     text,
-                    file=kyylogo,
+                    file=fallogo,
                     link_preview=True,
                     buttons=main_help_button)
 
@@ -859,7 +858,7 @@ with bot:
 """)
                 await event.edit(
                     text,
-                    file=kyylogo,
+                    file=fallogo,
                     link_preview=True,
                     buttons=[Button.inline("ᴋᴇᴍʙᴀʟɪ", data="gcback")])
             else:
@@ -871,7 +870,7 @@ with bot:
             buttons = [
                 (custom.Button.inline("ʙᴜᴋᴀ ᴍᴇɴᴜ", data="gcback"),),
             ]
-            await event.edit("**ᴍᴇɴᴜ ᴅɪᴛᴜᴛᴜᴘ​!**", file=kyylogo, buttons=buttons)
+            await event.edit("**ᴍᴇɴᴜ ᴅɪᴛᴜᴛᴜᴘ​!**", file=fallogo, buttons=buttons)
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(
