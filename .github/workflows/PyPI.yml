@@ -1,4 +1,4 @@
-name: Python
+name: PyPI
 
 on:
   push:
@@ -13,13 +13,13 @@ jobs:
     steps:
     - uses: actions/checkout@v3
 
-    - name: Set up Python
-      uses: actions/setup-python@v3
+    - name: Set up PyPI
+      uses: actions/setup-PyPI@v3
       with:
-        python-version: 3.9
+        PyPI-version: 3.9
 
     - name: Build
-      run: py build -v ./...
+      run: PyPI build -v ./...
 
     - name: Test
-      run: py test -v ./...
+      run: PyPI test -v ./...
