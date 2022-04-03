@@ -12,12 +12,6 @@ jobs:
         uses: actions/setup-python@v1
         with:
           python-version: 3.9
-          
-      - name: Build
-        run: python build -v ./...
-
-      - name: Test
-        run: python test -v ./...
 
       - name: Install Python lint libraries
         run: |
