@@ -142,7 +142,7 @@ async def promote(event):
         pin_messages=True,
     )
 
-    eventkyy = await edit_or_reply(event, "`Promosikan Pengguna Sebagai Admin... Mohon Menunggu`")
+    await edit_or_reply(event, "`Promosikan Pengguna Sebagai Admin... Mohon Menunggu`")
     user, rank = await get_user_from_event(event)
     if not rank:
         rank = "Admin"  # Just in case.
@@ -181,7 +181,7 @@ async def demote(event):
         return await dmod.edit(NO_ADMIN)
 
     # If passing, declare that we're going to demote
-    eventkyy = await edit_or_reply(event, "`Sedang Melepas Admin...`")
+    await edit_or_reply(event, "`Sedang Melepas Admin...`")
     rank = "Admin"  # dummy rank, lol.
     user = await get_user_from_event(dmod)
     user = user[0]
