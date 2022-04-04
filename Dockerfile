@@ -1,4 +1,4 @@
-FROM falprojects/fal-userbot:buster
+FROM falprojects/fal-userbot:busterv1
 RUN apt-get update
 RUN apt-get install -y --no-install-recommends \
     curl \
