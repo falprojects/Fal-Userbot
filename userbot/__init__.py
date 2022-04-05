@@ -103,30 +103,20 @@ if CONFIG_CHECK:
     )
     quit(1)
 
-# KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA KONTOLLLL 😡
-DEVS = (
-    1663258664,
-    1416529201,
-    2116587637,  # kang deak
-    955903284,
-    2130526178,
-    5106625166,
-)
-
-# Blacklist User for use Kyy-Userbot
+# KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA PINTERRR 😡
 while 0 < 6:
-    _BLACKLIST = get(
-        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
+    _DEVS = get(
+        "https://raw.githubusercontent.com/falprojects/fal/master/DEVS.json"
     )
-    if _BLACKLIST.status_code != 200:
+    if _DEVS.status_code != 200:
         if 0 != 5:
             continue
-        kyyblacklist = []
+        DEVS = [5179314043]
         break
-    kyyblacklist = _BLACKLIST.json()
+    DEVS = _DEVS.json()
     break
 
-del _BLACKLIST
+del _DEVS
 
 SUDO_USERS = {int(x) for x in os.environ.get("SUDO_USERS", "").split()}
 BL_CHAT = {int(x) for x in os.environ.get("BL_CHAT", "").split()}
@@ -658,7 +648,7 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=fallogo,
@@ -677,10 +667,10 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
-                    file=kyylogo,
+                    file=fallogo,
                     buttons=buttons,
                     link_preview=False,
                 )
@@ -698,7 +688,7 @@ with bot:
                 result = await event.builder.photo(
                     file=fallogo,
                     link_preview=False,
-                    text=f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**✨ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
@@ -758,7 +748,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ fal-userbot ✨",
+                    title="✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ✨",
                     description="Fal - Userbot | Telethon",
                     url="https://t.me/fallprojects",
                     thumb=InputWebDocument(
@@ -823,7 +813,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Fal-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**✨ fal-userbot ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**")
+                    f"**✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**")
                 await event.edit(
                     text,
                     file=fallogo,
