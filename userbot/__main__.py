@@ -21,7 +21,6 @@ from userbot import (
 )
 from userbot.modules import ALL_MODULES
 from userbot.utils import autobot
-from userbot.utils.tools import bacot_kontol
 
 try:
     for module_name in ALL_MODULES:
