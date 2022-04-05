@@ -8,58 +8,40 @@
 import sys
 from importlib import import_module
 
-import requests
-from telethon.tl.functions.channels import InviteToChannelRequest as Addbot
+
 from userbot import (
-    BOTLOG_CHATID,
-    BOT_USERNAME,
     BOT_TOKEN,
+    BOT_USERNAME,
     BOT_VER,
+    BOTLOG_CHATID,
     ALIVE_LOGO,
     LOGS,
-    kyyblacklist,
     bot,
     call_py,
 )
-from userbot import CMD_HANDLER as cmd
 from userbot.modules import ALL_MODULES
-from userbot.utils import autobot, autopilot
+from userbot.utils import autobot
+from userbot.utils.tools import bacot_kontol
 
 try:
+    for module_name in ALL_MODULES:
+        imported_module = import_module("userbot.modules." + module_name)
     bot.start()
     call_py.start()
     user = bot.get_me()
-    kyyblacklist = requests.get(
-        "https://raw.githubusercontent.com/muhammadrizky16/Kyyblack/master/kyyblacklist.json"
-    ).json()
-    if user.id in kyyblacklist:
-        LOGS.warning(
-            "MAKANYA GA USAH BERTINGKAH GOBLOK, USERBOTnya GUA MATIIN NAJIS BANGET DIPAKE ORANG KEK LU.\nCredits: @IDnyaKosong"
-        )
-        sys.exit(1)
-except Exception as e:
+    LOGS.info(f"✨Fal-Userbot✨ ⚙️ V{BOT_VER} [ TELAH DIAKTIFKAN! ]")
+except BaseException as e:
     LOGS.info(str(e), exc_info=True)
     sys.exit(1)
 
-for module_name in ALL_MODULES:
-    imported_module = import_module("userbot.modules." + module_name)
 
-if not BOTLOG_CHATID:
-    LOGS.info(
-        "BOTLOG_CHATID Vars tidak terisi, Memulai Membuat Grup Otomatis..."
-    )
-    bot.loop.run_until_complete(autopilot())
-
-LOGS.info(
-    f"Jika {user.first_name} Membutuhkan Bantuan, Silahkan Tanyakan di Channel https://t.me/fallprojects")
-LOGS.info(
-    f"✨Fal-Userbot✨ ⚙️ V{BOT_VER} [TELAH DIAKTIFKAN!]")
-
-
-async def check_alive():
+async def userbot_on():
+    user = await bot.get_me()
     try:
         if BOTLOG_CHATID != 0:
-            await bot.send_file(BOTLOG_CHATID, ALIVE_LOGO, caption=f"✨**Fal Userbot Berhasil Diaktifkan**!!\n━━━━━━━━━━━━━━━\n➠ **Userbot Version** - `3.1.5@Fal-Userbot`\n➠ **Ketik** `{cmd}ping` **Untuk Mengecheck Bot**\n━━━━━━━━━━━━━━━\n➠ **Powered By:** @fallprojects ")
+            await bot.send_file(
+                BOTLOG_CHATID, ALIVE_LOGO, caption=f"** Fal-Userbot Berhasil Diaktifkan✨**\n━━━━━━━━━━━━━━━━━━━\n✦ **Oᴡɴᴇʀ Bᴏᴛ :** [{user.first_name}](tg://user?id={user.id})\n✦ **Bᴏᴛ Vᴇʀ :** `8.2`\n━━━━━━━━━━━━━━━━━━━\n✦ **Owner​ :** @falprojects\n✦ **Channel​ :** @fallprojects \n━━━━━━━━━━━━━━━━━━━"
+            )
     except Exception as e:
         LOGS.info(str(e))
     try:
@@ -67,13 +49,13 @@ async def check_alive():
     except BaseException:
         pass
 
+
 bot.loop.run_until_complete(check_alive())
 if not BOT_TOKEN:
     LOGS.info(
-        "BOT_TOKEN Vars tidak terisi, Memulai Membuat BOT Otomatis di @Botfather..."
+        "Vars BOT_TOKEN tidak terdeteksi, mari bikin bot di @Botfather..."
     )
     bot.loop.run_until_complete(autobot())
-
 if len(sys.argv) not in (1, 3, 4):
     bot.disconnect()
 else:
