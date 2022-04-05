@@ -5,12 +5,12 @@ from telethon.errors.rpcerrorlist import YouBlockedUserError
 from telethon.tl.functions.contacts import UnblockRequest
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, fal_cmd
 
 chat = "@BotFather"
 
 
-@kyy_cmd(pattern="botbaru ?(.*)")
+@fal_cmd(pattern="botbaru ?(.*)")
 async def _(event):
     if event.fwd_from:
         return
@@ -18,7 +18,7 @@ async def _(event):
         text, username = event.pattern_match.group(1).split()
 
     else:
-        await edit_or_reply(event, "`Masukan Yang Benar Cok Biar Bisa Bikin Bot!!`")
+        await edit_or_reply(event, "`Masukan Yang Benar Pinter Biar Bisa Bikin Bot!!`")
         return
 
     async with event.client.conversation(chat) as conv:
