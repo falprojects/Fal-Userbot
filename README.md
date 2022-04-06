@@ -24,7 +24,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 
 ## sᴛʀɪɴɢ sᴇssɪᴏɴ :
-[![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-white)]
+[![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-green)]
 
 <h2 align="center">
    ᴍᴇᴛᴏᴅᴇ ᴅᴇᴘʟᴏʏ
@@ -36,7 +36,7 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 
 
 ### sᴜᴘᴘᴏʀᴛ & ᴜᴘᴅᴀᴛᴇs :
-<a href="https://t.me/falprojects"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
+<a href="https://t.me/fallprojects"><img src="https://img.shields.io/badge/Join-Updates%20Channel-white.svg?style=for-the-badge&logo=Telegram"></a>
 
 ### ғᴏʟʟᴏᴡ ᴍᴇ :
 <p align="left">
