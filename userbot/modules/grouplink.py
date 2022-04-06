@@ -1,10 +1,10 @@
 # port by KOALA 🐨 /@manusiarakitann
 
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, fal_cmd
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern="gsend ?(.*)")
+@fal_cmd(pattern="gsend ?(.*)")
 async def remoteaccess(event):
 
     p = event.pattern_match.group(1)
@@ -30,7 +30,7 @@ async def remoteaccess(event):
         await event.client.send_message(chat_id, msg)
         await edit_or_reply(event, "Pesan Di Di Teruskan Ke Grup Tujuan`")
     except BaseException:
-        await edit_or_reply(event, "** Gagal Mengirim Pesan, Emang Lu Join Grup Nya Goblok ? **")
+        await edit_or_reply(event, "** Gagal Mengirim Pesan, Emang Lu Join Grup Nya Pinter ? **")
 
 CMD_HELP.update(
     {
