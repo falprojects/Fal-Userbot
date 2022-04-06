@@ -18,7 +18,7 @@ from userbot import (
     CMD_HELP,
     owner,
 )
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, fal_cmd
 
 heroku_api = "https://api.heroku.com"
 if HEROKU_APP_NAME is not None and HEROKU_API_KEY is not None:
@@ -34,7 +34,7 @@ else:
 """
 
 
-@kyy_cmd(pattern="(get|del) var(?: |$)(\\w*)")
+@fal_cmd(pattern="(get|del) var(?: |$)(\\w*)")
 async def variable(var):
     exe = var.pattern_match.group(1)
     if app is None:
@@ -96,7 +96,7 @@ async def variable(var):
             return True
 
 
-@kyy_cmd(pattern=r'set var (\w*) ([\s\S]*)')
+@fal_cmd(pattern=r'set var (\w*) ([\s\S]*)')
 async def set_var(var):
     xx = await edit_or_reply(var, "`Sedang Menyetel Config Vars ヅ`")
     variable = var.pattern_match.group(1)
@@ -125,7 +125,7 @@ async def set_var(var):
 """
 
 
-@kyy_cmd(pattern="usage(?: |$)")
+@fal_cmd(pattern="usage(?: |$)")
 async def dyno_usage(dyno):
     """
         Get your account Dyno Usage
@@ -181,7 +181,7 @@ async def dyno_usage(dyno):
             AppMinutes = math.floor(AppQuotaUsed % 60)
 
             await xx.edit(
-                "✨ **ɪɴꜰᴏʀᴍᴀsɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
+                "❆ **ɪɴꜰᴏʀᴍᴀꜱɪ ᴅʏɴᴏ ʜᴇʀᴏᴋᴜ :**\n"
                 "╔════════════════════╗\n"
                 f"• **ᴘᴇɴɢɢᴜɴᴀ ᴅʏɴᴏ sᴀᴀᴛ ɪɴɪ :**\n"
                 f"  `{AppHours}`**ᴊᴀᴍ**  `{AppMinutes}`**ᴍᴇɴɪᴛ**  "
@@ -198,7 +198,7 @@ async def dyno_usage(dyno):
             return True
 
 
-@kyy_cmd(pattern="logs")
+@fal_cmd(pattern="logs")
 async def _(dyno):
     try:
         Heroku = heroku3.from_key(HEROKU_API_KEY)
