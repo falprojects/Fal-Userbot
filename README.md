@@ -23,9 +23,6 @@ Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ```
 
 
-## sᴛʀɪɴɢ sᴇssɪᴏɴ :
-[![GenerateStringName](https://img.shields.io/badge/repl.it-generateStringName-green)]
-
 <h2 align="center">
    ᴍᴇᴛᴏᴅᴇ ᴅᴇᴘʟᴏʏ
 </h2>
