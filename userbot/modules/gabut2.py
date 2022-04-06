@@ -1,21 +1,21 @@
 from time import sleep
 from userbot import CMD_HELP, CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import fal_cmd
 
 
-@kyy_cmd(pattern='Kyy(?: |$)(.*)')
+@fal_cmd(pattern='Fal(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
-    await typew.edit("`Hai Perkenalkan Namaku Kyy`")
+    await typew.edit("`Hai Perkenalkan Namaku Fal`")
     sleep(3)
     await typew.edit("`19 Tahun`")
     sleep(1)
-    await typew.edit("`Tinggal Di Batam, Salam Kenal:)`")
+    await typew.edit("`Tinggal Di Kalsel, Salam Kenal Kamu:)`")
 # Create by myself @localheart
 
 
-@kyy_cmd(pattern='sayang(?: |$)(.*)')
+@fal_cmd(pattern='sayang(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
@@ -27,7 +27,7 @@ async def typewriter(typew):
 # Create by myself @localheart
 
 
-@kyy_cmd(pattern='semangat(?: |$)(.*)')
+@fal_cmd(pattern='semangat(?: |$)(.*)')
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(3)
