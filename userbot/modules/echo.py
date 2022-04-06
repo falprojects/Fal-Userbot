@@ -4,7 +4,7 @@
 
 from userbot import CMD_HELP, CMD_HANDLER as cmd
 from userbot.events import register
-from userbot.utils import kyy_cmd
+from userbot.utils import fal_cmd
 from userbot.modules.sql_helper.echo_sql import (
     addecho,
     get_all_echos,
@@ -18,12 +18,12 @@ from userbot.utils import edit_delete, edit_or_reply
 from userbot.utils.events import get_user_from_event
 
 
-@kyy_cmd(pattern="addecho(?: |$)(.*)")
+@fal_cmd(pattern="addecho(?: |$)(.*)")
 async def echo(event):
     if event.reply_to_msg_id is None:
         return await event.edit("`Balas pesan Pengguna untuk menggemakan pesannya`")
-    kyyevent = await event.edit("`Tambahkan Echo ke pengguna...`")
-    user, rank = await get_user_from_event(event, kyyevent, nogroup=True)
+    falevent = await event.edit("`Tambahkan Echo ke pengguna...`")
+    user, rank = await get_user_from_event(event, falevent, nogroup=True)
     if not user:
         return
     reply_msg = await event.get_reply_message()
@@ -53,7 +53,7 @@ async def echo(event):
         await edit_or_reply(roseevent, "Berhasil")
 
 
-@kyy_cmd(pattern="rmecho(?: |$)(.*)")
+@fal_cmd(pattern="rmecho(?: |$)(.*)")
 async def echo(event):
     if event.reply_to_msg_id is None:
         return await event.edit("Reply to a User's message to echo his messages")
@@ -64,14 +64,14 @@ async def echo(event):
         try:
             remove_echo(chat_id, user_id)
         except Exception as e:
-            await edit_delete(kyyevent, f"**Error:**\n`{str(e)}`")
+            await edit_delete(falevent, f"**Error:**\n`{str(e)}`")
         else:
             await event.edit("Echo has been stopped for the user")
     else:
         await event.edit("The user is not activated with echo")
 
 
-@kyy_cmd(pattern="delecho(?: |$)(.*)")
+@fal_cmd(pattern="delecho(?: |$)(.*)")
 async def echo(event):
     input_str = event.pattern_match.group(1)
     if input_str:
@@ -101,7 +101,7 @@ async def echo(event):
             await event.edit("Echo telah di hentikan.")
 
 
-@kyy_cmd(pattern="echolist(?: |$)(.*)")
+@fal_cmd(pattern="echolist(?: |$)(.*)")
 async def echo(event):  # sourcery no-metrics
     input_str = event.pattern_match.group(1)
     private_chats = ""
