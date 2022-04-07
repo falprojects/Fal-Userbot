@@ -1,7 +1,7 @@
 {
   "name": "Fal-Userbot",
-  "description": "USERBOT KHUSUS YANG DIGUNAKAN UNTUK BERSENANG-SENANG DI TELEGRAM.",
-  "logo": "https://telegra.ph/file/05dba38c6d7d79cea533e.jpg",
+  "description": "USERBOT KHUSUS YANG DIGUNAKAN UNTUK MENJADI HACKER DI TELEGRAM.",
+  "logo": "https://telegra.ph/file/ed8bfa75e3e09f7229d24.jpg",
   "keywords": [
     "telegram",
     "userbot",
@@ -22,8 +22,13 @@
       "description": "Dapatkan Api Hash Di Web my.telegram.org",
       "required": true
     },
+    "ALIVE_LOGO": {
+      "description": "Foto dalam module .alive",
+      "value": "https://telegra.ph/file/ed8bfa75e3e09f7229d24.jpg",
+      "required": false
+    },
      "STRING_SESSION": {
-      "description": "Dapatkan String Session di termux caranya ada di repo, jika tidak tau reponya tanya ke @falprojects di telegram",
+      "description": "Jika tidak paham cara mendapatkan string bisa tanya ke @falprojects",
       "required": true
     },
     "HEROKU_APP_NAME": {
@@ -32,13 +37,36 @@
     },
     "HEROKU_API_KEY": {
       "description": "Heroku API KEY mu, dapatkan dari web 'https://dashboard.heroku.com/account'",
-      "value": "Check Di Heroku Dashboard Mu",
       "required": true
     },
-    "PM_AUTO_BAN": {
-      "description": "Pengalihan Fitur Larangan Otomatis PM. atau /skip",
-      "value": "False",
+    "BOTLOG_CHATID": {
+      "description": "Bikin Grup Publik Lalu Invite Bot @MissRose_Bot Ke Grup Lo, Trus Ketik /id. Ntr bakal muncul ID seperti ini Contoh : -1001681347xxx",
       "required": true
+    },
+    "G_BAN_LOGGER_GROUP": {
+      "description": "Bikin Grup Publik Lalu Invite Bot @MissRose_Bot Ke Grup Lo, Trus Ketik /id. Ntr bakal muncul ID seperti ini Contoh : -1001681347xxx",
+      "required": true
+    },
+    "BOT_TOKEN": {
+      "description": "Bikin bot tokennya dulu tolol, bikinnya tu di @botfather trus salin tokennya kesini.",
+      "required": false
+    },
+    "BOT_USERNAME": {
+      "description": "id username bot mu blok.",
+      "required": false
+    },
+    "PM_AUTO_BAN": {
+      "description": "Bot yang menjaga PC/Room chat kamu, ubah True untuk mengaktifkannya dan False untuk mematikannya.",
+      "value": "True",
+      "required": false
+    },
+    "ALIVE_NAME": {
+      "description": "Nama untuk menunjukan pesan .alive",
+      "required": true
+    },
+    "S_PACK_NAME": {
+      "description": "Nama Sticker Pack lo",
+      "required": false
     }
   },
   "addons": [
