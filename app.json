@@ -52,7 +52,7 @@
       "required": false
     },
     "BOT_USERNAME": {
-      "description": "id username bot mu blok.",
+      "description": "id username bot mu pinter.",
       "required": false
     },
     "PM_AUTO_BAN": {
@@ -65,7 +65,7 @@
       "required": true
     },
     "S_PACK_NAME": {
-      "description": "Nama Sticker Pack lo",
+      "description": "Nama Sticker Pack Mu Pinter (bebas)",
       "required": false
     }
   },
