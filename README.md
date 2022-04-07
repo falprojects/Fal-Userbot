@@ -16,8 +16,8 @@
 ## ᴅɪsᴄʟᴀɪᴍᴇʀ
 
 ```
-Saya tidak bertanggung jawab atas penyalahgunaan bot ini.
-Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
+•Saya tidak bertanggung jawab atas penyalahgunaan bot ini.
+•Gunakan bot ini dengan risiko Anda sendiri, dan gunakan dengan bijak.
 ```
 
 
