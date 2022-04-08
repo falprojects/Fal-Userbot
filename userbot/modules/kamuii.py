@@ -1,13 +1,13 @@
 import os
 from telethon.errors.rpcerrorlist import YouBlockedUserError
 
-from userbot.utils import kyy_cmd
+from userbot.utils import fal_cmd
 from userbot import bot, TEMP_DOWNLOAD_DIRECTORY, CMD_HELP, CMD_HANDLER as cmd
 
 
-@kyy_cmd(pattern='kamuii(:? |$)([1-8])?')
+@fal_cmd(pattern='kamuii(:? |$)([1-8])?')
 async def _(fry):
-    await fry.edit("`Prosess, Mengaktifkan jurus tumor bolong...😜`")
+    await fry.edit("`Prosess, Mengaktifkan mangekyou sharingan...`")
     level = fry.pattern_match.group(2)
     if fry.fwd_from:
         return
@@ -67,7 +67,7 @@ async def _(fry):
     return os.remove(downloaded_file_name)
 
 
-@kyy_cmd(pattern='df(:? |$)([1-8])?')
+@fal_cmd(pattern='df(:? |$)([1-8])?')
 async def _(fry):
     await fry.edit("`Sedang Dalam Proses......`")
     level = fry.pattern_match.group(2)
