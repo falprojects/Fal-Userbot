@@ -231,8 +231,7 @@ async def redis(alive):
         f"• **Pytgcalls Version :** `{pytgcalls.__version__}` \n"
         f"• **Bot Version :** `{BOT_VER}` \n"
         f"• **Modules :** `{len(modules)}` Modules \n"
-        f"  **[ᴄʜᴀɴɴᴇʟ](https://t.me/fallprojects** | **[ᴏᴡɴᴇʀ](https://t.me/falprojects)** | **[ɢɪᴛʜᴜʙ](https://github.com/falprojects/Fal-Userbot)** "
-    )
+        f"  **[ᴄʜᴀɴɴᴇʟ](https://t.me/fallprojects** | **[ᴏᴡɴᴇʀ](https://t.me/falprojects)** | **[ɢɪᴛʜᴜʙ](https://github.com/falprojects/Fal-Userbot)** ")
     if ALIVE_LOGO:
         try:
             logo = ALIVE_LOGO
