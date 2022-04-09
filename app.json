@@ -43,16 +43,8 @@
       "description": "Bikin Grup Publik Lalu Invite Bot @MissRose_Bot Ke Grup Lo, Trus Ketik /id. Ntr bakal muncul ID seperti ini Contoh : -1001681347xxx",
       "required": true
     },
-    "G_BAN_LOGGER_GROUP": {
-      "description": "Bikin Grup Publik Lalu Invite Bot @MissRose_Bot Ke Grup Lo, Trus Ketik /id. Ntr bakal muncul ID seperti ini Contoh : -1001681347xxx",
-      "required": true
-    },
     "BOT_TOKEN": {
       "description": "Bikin bot tokennya dulu, bikinnya di @botfather trus salin tokennya kesini.",
-      "required": false
-    },
-    "BOT_USERNAME": {
-      "description": "id username bot mu pinter.",
       "required": false
     },
     "PM_AUTO_BAN": {
