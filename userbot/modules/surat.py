@@ -25,7 +25,7 @@ async def typewriter(typew):
     await xnxx.edit("**ṣirāṭallażīna an'amta 'alaihim gairil-magḍụbi 'alaihim wa laḍ-ḍāllīn**")
     sleep(1)
     await xnxx.edit("**Aamiin..**")
-# Create by myself 
+# Create by myself
 
 CMD_HELP.update({
     "surat":
