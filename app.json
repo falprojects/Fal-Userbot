@@ -48,7 +48,7 @@
       "required": true
     },
     "BOT_TOKEN": {
-      "description": "Bikin bot tokennya dulu tolol, bikinnya tu di @botfather trus salin tokennya kesini.",
+      "description": "Bikin bot tokennya dulu, bikinnya di @botfather trus salin tokennya kesini.",
       "required": false
     },
     "BOT_USERNAME": {
