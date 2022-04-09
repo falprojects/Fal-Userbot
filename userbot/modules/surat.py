@@ -8,7 +8,7 @@ from userbot.utils import edit_or_reply, fal_cmd
 async def typewriter(typew):
     typew.pattern_match.group(1)
     sleep(1)
-    xnxx = await edit_or_reply(typew, "**SURAT Al-Fatihah**")
+    xnxx = await edit_or_reply(typew, "**Surat Al-Fatihah**")
     sleep(1)
     await xnxx.edit("**bismillāhir-raḥmānir-raḥīm**")
     sleep(1)
