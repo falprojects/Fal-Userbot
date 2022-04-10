@@ -95,7 +95,7 @@ async def pmclose(event):
         await event.delete()
 
 
-@callback(data=re.compile(b"goblok"))
+@callback(data=re.compile(b"pintar"))
 async def pmclose(event):
     await event.delete()
 
@@ -241,7 +241,7 @@ async def users(event):
                 event.chat_id,
                 fileuser,
                 force_document=True,
-                thumb="resources/extras/IMG_20211216_160240_756.jpg",
+                thumb="resources/extras/IMG_20220407125001806_11.jpg",
                 caption="**Total Pengguna Di Bot anda.**",
                 allow_cache=False,
                 buttons=[
@@ -480,7 +480,7 @@ async def bot_start(event):
             start_msg = f"**Users**: {mention}\
                         \n\n**Bot**: [{OWNER}](tg://user?id={OWNER_ID}) \
                         \n**Forward**: True\
-                        \n\n**Powered by**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)"
+                        \n\n**Powered by**: [Fal-Userbot](https://github.com/falprojects/Fal-Userbot)"
             buttons = [
                 (
                     Button.inline("ɪɴꜰᴏ", data="infor"),
@@ -539,12 +539,12 @@ async def _(event):
 async def infor(event):
     await tgbot.send_message(
         event.chat_id,
-        message=f"**Groups**: [sᴜᴘᴘᴏʀᴛ](t.me/NastySupportt)\n**Github**: [Kyy-Userbot](https://github.com/muhammadrizky16/Kyy-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/muhammadrizky16/templat-userbot2)",
+        message=f"**Channel**: [sᴜᴘᴘᴏʀᴛ](t.me/fallprojects)\n**Github**: [Fal-Userbot](https://github.com/falprojects/Fal-Userbot)\n**Deploy**: [Heroku](https://dashboard.heroku.com/new?template=https://github.com/falprojects/templat-userbot2)",
         buttons=[
             [
                 custom.Button.inline(
                     "ᴄʟᴏꜱᴇ",
-                    data="goblok",
+                    data="pintar",
                 )
             ],
         ],
