@@ -9,11 +9,11 @@ from asyncio import sleep
 from telethon.errors import rpcbaseerrors
 
 from userbot import CMD_HELP, DEVS, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, fal_cmd
 from userbot.events import register
 
 
-@kyy_cmd(pattern="purge$")
+@fal_cmd(pattern="purge$")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cpurge$")
 async def fastpurger(purg):
     chat = await purg.get_input_chat()
@@ -30,7 +30,7 @@ async def fastpurger(purg):
                 await purg.client.delete_messages(chat, msgs)
                 msgs = []
     else:
-        return await edit_or_reply(purg, "`Mohon Balas Ke Pesan ✨ `")
+        return await edit_or_reply(purg, "`Mohon Balas Ke Pesan 🗣️ `")
 
     if msgs:
         await purg.client.delete_messages(chat, msgs)
@@ -47,7 +47,7 @@ async def fastpurger(purg):
     await done.delete()
 
 
-@kyy_cmd(pattern="purgeme")
+@fal_cmd(pattern="purgeme")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cpurgeme")
 async def purgeme(delme):
     message = delme.text
@@ -62,20 +62,20 @@ async def purgeme(delme):
 
     smsg = await delme.client.send_message(
         delme.chat_id,
-        "`Berhasil Menghapus Pesan,` " + str(count) + " `Pesan Telah Dihapus ✨`",
+        "`Berhasil Menghapus Pesan,` " + str(count) + " `Pesan Telah Dihapus ⚡`",
     )
     """
     if BOTLOG:
         await delme.client.send_message(
             BOTLOG_CHATID,
-            "`Telah Menghapus Pesan,` " + str(count) + " Pesan Telah Dihapus ✨`")
+            "`Telah Menghapus Pesan,` " + str(count) + " Pesan Telah Dihapus ⚡`")
     """
     await sleep(2)
     i = 1
     await smsg.delete()
 
 
-@kyy_cmd(pattern="del$")
+@fal_cmd(pattern="del$")
 @register(incoming=True, from_users=DEVS, pattern=r"^\.cdel$")
 async def delete_it(delme):
     msg_src = await delme.get_reply_message()
@@ -86,7 +86,7 @@ async def delete_it(delme):
             """
             if BOTLOG:
                 await delme.client.send_message(
-                    BOTLOG_CHATID, "`Berhasil Menghapus Pesan ✨`")
+                    BOTLOG_CHATID, "`Berhasil Menghapus Pesan ⚡`")
             """
         except rpcbaseerrors.BadRequestError:
             await edit_or_reply(delme, "`Tidak Bisa Menghapus Pesan`")
@@ -97,7 +97,7 @@ async def delete_it(delme):
             """
 
 
-@kyy_cmd(pattern="edit")
+@fal_cmd(pattern="edit")
 async def editer(edit):
     message = edit.text
     chat = await edit.get_input_chat()
@@ -117,7 +117,7 @@ async def editer(edit):
    """
 
 
-@kyy_cmd(pattern="sd")
+@fal_cmd(pattern="sd")
 async def selfdestruct(destroy):
     message = destroy.text
     counter = int(message[4:6])
@@ -129,7 +129,7 @@ async def selfdestruct(destroy):
     """
     if BOTLOG:
         await destroy.client.send_message(BOTLOG_CHATID,
-                                          "`✨ SD Berhasil Dilakukan ✨`")
+                                          "`⚡ SD Berhasil Dilakukan ✨`")
     """
 
 
