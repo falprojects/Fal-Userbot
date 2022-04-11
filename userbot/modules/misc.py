@@ -7,7 +7,7 @@ import os
 import io
 import sys
 from userbot import BOTLOG, BOTLOG_CHATID, CMD_HELP, UPSTREAM_REPO_URL, bot, CMD_HANDLER as cmd
-from userbot.utils import edit_or_reply, edit_delete, kyy_cmd
+from userbot.utils import edit_or_reply, edit_delete, fal_cmd
 from userbot.utils import time_formatter
 import urllib
 import requests
@@ -17,7 +17,7 @@ from PIL import Image
 
 
 REPOLINK = str(
-    UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/muhammadrizky16/Kyy-Userbot"
+    UPSTREAM_REPO_URL) if UPSTREAM_REPO_URL else "https://github.com/falprojects/Fal-Userbot"
 # ============================================
 
 opener = urllib.request.build_opener()
@@ -25,7 +25,7 @@ useragent = 'Mozilla/5.0 (Linux; Android 9; SM-G960F Build/PPR1.180610.011; wv) 
 opener.addheaders = [('User-agent', useragent)]
 
 
-@kyy_cmd(pattern="random")
+@fal_cmd(pattern="random")
 async def randomise(items):
     """ For .random command, get a random item from the list of items. """
     itemo = (items.text[8:]).split()
@@ -39,7 +39,7 @@ async def randomise(items):
                      itemo[index] + "`")
 
 
-@kyy_cmd(pattern="sleep ([0-9]+)$")
+@fal_cmd(pattern="sleep ([0-9]+)$")
 async def sleepybot(time):
     """ For .sleep command, let the userbot snooze for a few second. """
     counter = int(time.pattern_match.group(1))
@@ -54,10 +54,10 @@ async def sleepybot(time):
     await xx.edit("`OK, I'm awake now.`")
 
 
-@kyy_cmd(pattern="shutdown$")
+@fal_cmd(pattern="shutdown$")
 async def killdabot(event):
     """ For .shutdown command, shut the bot down."""
-    await edit_or_reply(event, "`Mematikan Kyy-Userbot....`")
+    await edit_or_reply(event, "`Mematikan Fal-Userbot....`")
     await asyncio.sleep(7)
     await event.delete()
     if BOTLOG:
@@ -66,9 +66,9 @@ async def killdabot(event):
     await bot.disconnect()
 
 
-@kyy_cmd(pattern="restart$")
+@fal_cmd(pattern="restart$")
 async def killdabot(event):
-    await edit_or_reply(event, "`Restarting Kyy-Userbot...`")
+    await edit_or_reply(event, "`Restarting Fal-Userbot...`")
     await asyncio.sleep(10)
     await event.delete()
     if BOTLOG:
@@ -79,16 +79,16 @@ async def killdabot(event):
     execle(sys.executable, *args, environ)
 
 
-@kyy_cmd(pattern="readme$")
+@Fal_cmd(pattern="readme$")
 async def reedme(e):
     await edit_or_reply(e,
                         "Here's Something for You to Read :\n"
-                        "\n[✨ Kyy-Userbot Repo](https://github.com/muhammadrizky16/Kyy-Userbot/blob/Kyy-Userbot/README.md)"
+                        "\n[⚡ Fal-Userbot Repo](https://github.com/falprojects/Fal-Userbot/blob/Fal-Userbot/README.md)"
                         "\n[Setup Guide - Basic](https://telegra.ph/How-to-host-a-Telegram-Userbot-11-02)"
                         "\n[Special - Note](https://telegra.ph/Special-Note-11-02)")
 
 
-@kyy_cmd(pattern="repeat (.*)")
+@fal_cmd(pattern="repeat (.*)")
 async def repeat(rep):
     cnt, txt = rep.pattern_match.group(1).split(' ', 1)
     replyCount = int(cnt)
@@ -102,31 +102,29 @@ async def repeat(rep):
     await rep.edit(replyText)
 
 
-@kyy_cmd(pattern="repo$")
+@fal_cmd(pattern="repo$")
 async def repo_is_here(wannasee):
     """ For .repo command, just returns the repo URL. """
     await edit_or_reply(wannasee,
-                        "**Hey**, I am using **✨ҡʏʏ-υѕєявσт✨** \n"
+                        "**Hey**, I am using **⚡𝐅𝐚𝐥-𝐔𝐬𝐞𝐫𝐛𝐨𝐭⚡** \n"
                         "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"
-                        "➣ **Repo Userbot :** [ɢɪᴛʜᴜʙ](https://github.com/muhammadrizky16/Kyy-Userbot)\n"
-                        "➣ **Owner Bot :** [ҡʏʏ](t.me/IDnyaKosong)\n"
-                        "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"
-                        "➣ **Support :** [sᴜᴘᴘᴏʀᴛ](https://t.me/NastySupportt)\n"
-                        "➣ **Channel :** [ᴄʜᴀɴɴᴇʟ](https://t.me/NastyProject)\n"
+                        "➣ **Repo Userbot :** [ɢɪᴛʜᴜʙ](https://github.com/falprojects/Fal-Userbot)\n"
+                        "➣ **Owner Bot :** [fal](t.me/falprojects)\n"
+                        "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"                      
+                        "➣ **Channel :** [ᴄʜᴀɴɴᴇʟ](https://t.me/fallprojects)\n"
                         "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"
                         )
 
 
-@kyy_cmd(pattern="string$")
+@fal_cmd(pattern="string$")
 async def repo_is_here(wannasee):
     """For .repo command, just returns the repo URL."""
     await edit_or_reply(wannasee,
-                        f"➣ **GET STRING SESSION VIA BOT :** [KLIK DISINI](https://t.me/NastyStringbot)\n"
-                        f"➣ **GET STRING SESSION VIA REPLIT :** [KLIK DISINI](https://replit.com/@rizkyhmdanii16/StringSession)\n"
+                        f"➣ **GET STRING SESSION VIA BOT :** [KLIK DISINI](https://t.me/StringFal)\n"
                         )
 
 
-@kyy_cmd(pattern="raw$")
+@fal_cmd(pattern="raw$")
 async def raw(event):
     the_real_message = None
     reply_to_id = None
@@ -150,7 +148,7 @@ async def raw(event):
             caption="`Here's the decoded message data !!`")
 
 
-@kyy_cmd(pattern="reverse(?: |$)(\\d*)")
+@fal_cmd(pattern="reverse(?: |$)(\\d*)")
 async def okgoogle(img):
     """ For .reverse command, Google search images and stickers. """
     if os.path.isfile("okgoogle.png"):
@@ -273,13 +271,13 @@ CMD_HELP.update({
     \n↳ : Dapatkan item acak dari daftar item.",
     "sleep": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}sleep <seconds>`\
     \n↳ : `{cmd}sleep`\
-    \n  •  **Function : Biarkan Kyy-Userbot tidur selama beberapa detik.",
+    \n  •  **Function : Biarkan Fal-Userbot tidur selama beberapa detik.",
     "shutdown": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}shutdown`\
     \n↳ : Mematikan bot",
     "repo": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}repo`\
-    \n↳ : Menampilan link Repository Kyy-Userbot.",
+    \n↳ : Menampilan link Repository Fal-Userbot.",
     "string": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}string`\
-    \n↳: Menampilkan link String Kyy-Userbot",
+    \n↳: Menampilkan link String Fal-Userbot",
     "readme": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙 `{cmd}readme`\
     \n↳ : Menyediakan tautan untuk mengatur userbot dan modulnya.",
     "repeat": f"𝘾𝙤𝙢𝙢𝙖𝙣𝙙: `{cmd}repeat <no> <text>`\
