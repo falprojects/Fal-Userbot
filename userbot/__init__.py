@@ -103,7 +103,7 @@ if CONFIG_CHECK:
     )
     quit(1)
 
-# KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA PINTERRR 😡
+# KALO NGEFORK/CLONE ID DEVS NYA GA USAH DI HAPUS YA PINTERRR ☺️
 while 0 < 6:
     _DEVS = get(
         "https://raw.githubusercontent.com/falprojects/fal/master/DEVS.json"
@@ -243,7 +243,7 @@ YOUTUBE_API_KEY = os.environ.get(
     "YOUTUBE_API_KEY") or "AIzaSyACwFrVv-mlhICIOCvDQgaabo6RIoaK8Dg"
 
 # Untuk Perintah .kyyalive
-FAL_TEKS_KUSTOM = os.environ.get("FAL_TEKS_KUSTOM", "I'am Using Fal-Userbot✨")
+FAL_TEKS_KUSTOM = os.environ.get("FAL_TEKS_KUSTOM", "I'am Using Fal-Userbot⚡")
 
 # Untuk Mengubah Pesan Welcome
 START_WELCOME = os.environ.get("START_WELCOME", None)
@@ -648,7 +648,7 @@ with bot:
                 current_page_number = int(looters)
                 buttons = paginate_help(
                     current_page_number, dugmeler, "helpme")
-                text = f"**✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**⚡ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=fallogo,
@@ -667,7 +667,7 @@ with bot:
         async def on_plug_in_callback_query_handler(event):
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:
                 buttons = paginate_help(0, dugmeler, "helpme")
-                text = f"**✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
+                text = f"**⚡ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**"
                 await event.edit(
                     text,
                     file=fallogo,
@@ -688,7 +688,7 @@ with bot:
                 result = await event.builder.photo(
                     file=fallogo,
                     link_preview=False,
-                    text=f"**✨ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
+                    text=f"**⚡ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**",
                     buttons=main_help_button,
                 )
             elif query.startswith("repo"):
@@ -748,7 +748,7 @@ with bot:
                 )
             else:
                 result = builder.article(
-                    title="✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ✨",
+                    title="⚡𝐅𝐚𝐥-𝐔𝐬𝐞𝐫𝐛𝐨𝐭⚡",
                     description="Fal - Userbot | Telethon",
                     url="https://t.me/fallprojects",
                     thumb=InputWebDocument(
@@ -813,7 +813,7 @@ with bot:
             if event.query.user_id == uid or event.query.user_id in SUDO_USERS:  # @Fal-Userbot
                 # https://t.me/TelethonChat/115200
                 text = (
-                    f"**✨ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ✨**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**")
+                    f"**⚡ ꜰᴀʟ-ᴜꜱᴇʀʙᴏᴛ ɪɴʟɪɴᴇ ᴍᴇɴᴜ ⚡**\n\n✣ **ᴏᴡɴᴇʀ :** [{user.first_name}](tg://user?id={user.id})\n✣ **ᴊᴜᴍʟᴀʜ** `{len(dugmeler)}` **Modules**")
                 await event.edit(
                     text,
                     file=fallogo,
@@ -822,7 +822,7 @@ with bot:
 
         @tgbot.on(
             events.callbackquery.CallbackQuery(  # pylint:disable=E0602
-                data=re.compile(rb"kyy_inline")
+                data=re.compile(rb"fal_inline")
             )
         )
         async def on_plug_in_callback_query_handler(event):
