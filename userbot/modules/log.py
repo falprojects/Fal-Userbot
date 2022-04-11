@@ -14,7 +14,7 @@ from userbot.modules.vcg import vcmention
 from userbot.utils import _format, edit_delete, edit_or_reply
 from userbot.utils.tools import media_type
 
-from userbot.utils import kyy_cmd
+from userbot.utils import fal_cmd
 
 
 class LOG_CHATS:
@@ -28,36 +28,36 @@ LOG_CHATS_ = LOG_CHATS()
 
 
 @bot.on(events.ChatAction)
-async def logaddjoin(kyy):
-    user = await kyy.get_user()
-    chat = await kyy.get_chat()
+async def logaddjoin(fal):
+    user = await fal.get_user()
+    chat = await fal.get_chat()
     if not (user and user.is_self):
         return
     if hasattr(chat, "username") and chat.username:
-        chat = f"[{chat.title}](https://t.me/{chat.username}/{kyy.action_message.id})"
+        chat = f"[{chat.title}](https://t.me/{chat.username}/{fal.action_message.id})"
     else:
-        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{kyy.action_message.id})"
-    if kyy.user_added:
-        tmp = kyy.added_by
-        text = f"u📩 **#TAMBAH_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Group** {chat}"
-    elif kyy.user_joined:
-        text = f"📨 **#LOG_GABUNG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Group** {chat}"
+        chat = f"[{chat.title}](https://t.me/c/{chat.id}/{fal.action_message.id})"
+    if fal.user_added:
+        tmp = fal.added_by
+        text = f"u📩 **#TAMBAH_LOG\n •** {vcmention(tmp)} **Menambahkan** {vcmention(user)}\n **• Ke Grup** {chat}"
+    elif fal.user_joined:
+        text = f"📨 **#LOG_GABUNG\n •** [{user.first_name}](tg://user?id={user.id}) **Bergabung\n • Ke Grup** {chat}"
     else:
         return
-    await kyy.client.send_message(BOTLOG_CHATID, text)
+    await fal.client.send_message(BOTLOG_CHATID, text)
 
 
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.is_private))
 @bot.on(events.MessageEdited(incoming=True, func=lambda e: e.is_private))
-async def monito_p_m_s(kyy):
+async def monito_p_m_s(fal):
     if BOTLOG_CHATID == -100:
         return
     if gvarstatus("PMLOG") and gvarstatus("PMLOG") == "false":
         return
-    sender = await kyy.get_sender()
+    sender = await fal.get_sender()
     await asyncio.sleep(0.5)
     if not sender.bot:
-        chat = await kyy.get_chat()
+        chat = await fal.get_chat()
         if not no_log_pms_sql.is_approved(chat.id) and chat.id != 777000:
             if LOG_CHATS_.RECENT_USER != chat.id:
                 LOG_CHATS_.RECENT_USER = chat.id
@@ -69,14 +69,14 @@ async def monito_p_m_s(kyy):
                         )
                     )
                     LOG_CHATS_.COUNT = 0
-                LOG_CHATS_.NEWPM = await kyy.client.send_message(
+                LOG_CHATS_.NEWPM = await fal.client.send_message(
                     BOTLOG_CHATID,
                     f"**💌 #MENERUSKAN #PESAN_BARU**\n** • Dari : **{_format.mentionuser(sender.first_name , sender.id)}\n** • User ID:** `{chat.id}`",
                 )
             try:
-                if kyy.message:
-                    await kyy.client.forward_messages(
-                        BOTLOG_CHATID, kyy.message, silent=True
+                if fal.message:
+                    await fal.client.forward_messages(
+                        BOTLOG_CHATID, fal.message, silent=True
                     )
                 LOG_CHATS_.COUNT += 1
             except Exception as e:
@@ -85,36 +85,36 @@ async def monito_p_m_s(kyy):
 
 @bot.on(events.NewMessage(incoming=True, func=lambda e: e.mentioned))
 @bot.on(events.MessageEdited(incoming=True, func=lambda e: e.mentioned))
-async def log_tagged_messages(yahaha):
+async def log_tagged_messages(hmm):
     if BOTLOG_CHATID == -100:
         return
-    pornhub = await yahaha.get_chat()
+    halal = await hmm.get_chat()
 
     if gvarstatus("GRUPLOG") and gvarstatus("GRUPLOG") == "false":
         return
     if (
-        (no_log_pms_sql.is_approved(pornhub.id))
+        (no_log_pms_sql.is_approved(halal.id))
         or (BOTLOG_CHATID == -100)
-        or (await yahaha.get_sender() and (await yahaha.get_sender()).bot)
+        or (await hmm.get_sender() and (await hmm.get_sender()).bot)
     ):
         return
     full = None
     try:
-        full = await yahaha.client.get_entity(yahaha.message.from_id)
+        full = await hmm.client.get_entity(hmm.message.from_id)
     except Exception as e:
         LOGS.info(str(e))
-    messaget = media_type(yahaha)
+    messaget = media_type(hmm)
     resalt = f"<b>📨 #TAGS #MESSAGE</b>\n<b> • Dari : </b>{_format.htmlmentionuser(full.first_name , full.id)}"
     if full is not None:
-        resalt += f"\n<b> • Grup : </b><code>{pornhub.title}</code>"
+        resalt += f"\n<b> • Grup : </b><code>{halal.title}</code>"
     if messaget is not None:
         resalt += f"\n<b> • Jenis Pesan : </b><code>{messaget}</code>"
     else:
-        resalt += f"\n<b> • 👀 </b><a href = 'https://t.me/c/{pornhub.id}/{yahaha.message.id}'>Lihat Pesan</a>"
-    resalt += f"\n<b> • Message : </b>{yahaha.message.message}"
+        resalt += f"\n<b> • 👀 </b><a href = 'https://t.me/c/{halal.id}/{hmm.message.id}'>Lihat Pesan</a>"
+    resalt += f"\n<b> • Message : </b>{hmm.message.message}"
     await asyncio.sleep(0.5)
-    if not yahaha.is_private:
-        await yahaha.client.send_message(
+    if not hmm.is_private:
+        await hmm.client.send_message(
             BOTLOG_CHATID,
             resalt,
             parse_mode="html",
@@ -122,7 +122,7 @@ async def log_tagged_messages(yahaha):
         )
 
 
-@kyy_cmd(pattern="save(?: |$)(.*)")
+@fal_cmd(pattern="save(?: |$)(.*)")
 async def log(log_text):
     if BOTLOG_CHATID:
         if log_text.reply_to_msg_id:
@@ -144,7 +144,7 @@ async def log(log_text):
         )
 
 
-@kyy_cmd(pattern="log$")
+@fal_cmd(pattern="log$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -155,7 +155,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@kyy_cmd(pattern="nolog$")
+@fal_cmd(pattern="nolog$")
 async def set_no_log_p_m(event):
     if BOTLOG_CHATID != -100:
         chat = await event.get_chat()
@@ -166,7 +166,7 @@ async def set_no_log_p_m(event):
             )
 
 
-@kyy_cmd(pattern="pmlog (on|off)$")
+@fal_cmd(pattern="pmlog (on|off)$")
 async def set_pmlog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
@@ -196,7 +196,7 @@ async def set_pmlog(event):
         await edit_or_reply(event, "**PM LOG Sudah Dimatikan**")
 
 
-@kyy_cmd(pattern="gruplog (on|off)$")
+@fal_cmd(pattern="gruplog (on|off)$")
 async def set_gruplog(event):
     if BOTLOG_CHATID == -100:
         return await edit_delete(
