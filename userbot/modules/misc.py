@@ -110,7 +110,7 @@ async def repo_is_here(wannasee):
                         "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"
                         "➣ **Repo Userbot :** [ɢɪᴛʜᴜʙ](https://github.com/falprojects/Fal-Userbot)\n"
                         "➣ **Owner Bot :** [fal](t.me/falprojects)\n"
-                        "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"                      
+                        "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"
                         "➣ **Channel :** [ᴄʜᴀɴɴᴇʟ](https://t.me/fallprojects)\n"
                         "卍━━━━━━━━━━━━━━━━━━━━━━卍\n"
                         )
