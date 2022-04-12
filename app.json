@@ -52,10 +52,6 @@
       "value": "True",
       "required": false
     },
-    "ALIVE_NAME": {
-      "description": "Nama untuk menunjukan pesan .alive",
-      "required": true
-    },
     "S_PACK_NAME": {
       "description": "Nama Sticker Pack Mu Pinter (bebas)",
       "required": false
