@@ -14,13 +14,13 @@ from datetime import datetime
 from speedtest import Speedtest
 from userbot import CMD_HANDLER as cmd, CMD_HELP, StartTime
 from userbot.events import register
-from userbot.utils import edit_or_reply, kyy_cmd
+from userbot.utils import edit_or_reply, fal_cmd
 
 absen = [
     "**Hadir ganteng** 🥵",
     "**Hadir bro** 😎",
     "**Hadir kak** 😉",
-    "**Hadir bang** 😁",
+    "**Hadir bang fal** 😁",
     "**Hadir kak maap telat** 🥺",
 ]
 
@@ -60,24 +60,24 @@ async def get_readable_time(seconds: int) -> str:
     return up_time
 
 
-@register(incoming=True, from_users=1663258664, pattern=r"^.absen$")
-async def _(kyy):
-    await kyy.reply(random.choice(absen))
+@register(incoming=True, from_users=5179314043, 5092792188, pattern=r"^.absen$")
+async def _(fal):
+    await fal.reply(random.choice(absen))
 
 
-@register(incoming=True, from_users=1663258664, pattern=r"^.kyy$")
-async def _(kyy):
-    await kyy.reply(random.choice(pacar))
+@register(incoming=True, from_users=5179314043, 5092792188, pattern=r"^.fal$")
+async def _(fal):
+    await fal.reply(random.choice(pacar))
 
 
-@kyy_cmd(pattern="sping$")
+@fal_cmd(pattern="sping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    xx = await edit_or_reply(pong, "**✲**")
-    await xx.edit("**✲✲**")
-    await xx.edit("**✲✲✲**")
+    xx = await edit_or_reply(pong, "**★**")
+    await xx.edit("**☆★**")
+    await xx.edit("**☆★☆**")
     await xx.edit("__DUAR__")
     await xx.edit("🔥")
     end = datetime.now()
@@ -86,11 +86,11 @@ async def redis(pong):
     await xx.edit(
         f"**[{user.first_name}](tg://user?id={user.id}) **        \n"
         f"**➾Kecepatan : ** '%sms'  \n"
-        f"**➾Branch : ** 'Kyy-Userbot` \n" % (duration)
+        f"**➾Branch : ** 'Fal-Userbot` \n" % (duration)
     )
 
 
-@kyy_cmd(pattern="lping$")
+@fal_cmd(pattern="lping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -101,14 +101,14 @@ async def redis(pong):
     user = await pong.client.get_me()
     await lping.edit(
         f"** [{user.first_name}](tg://user?id={user.id}) **\n"
-        f"✧ **-ꜱɪɢɴᴀʟ- :** "
+        f"❖ **-ꜱɪɢɴᴀʟ- :** "
         f"`%sms` \n"
-        f"✧ **-ᴜᴘᴛɪᴍᴇ- :** "
+        f"❖ **-ᴜᴘᴛɪᴍᴇ- :** "
         f"`{uptime}` \n" % (duration)
     )
 
 
-@kyy_cmd(pattern="xping$")
+@fal_cmd(pattern="xping$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -125,7 +125,7 @@ async def redis(pong):
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await xping.edit(
-        f"**✨ҡʏʏ-υѕєявσт✨**\n"
+        f"**⚡𝐅𝐚𝐥-𝐔𝐬𝐞𝐫𝐛𝐨𝐭⚡**\n"
         f"➾ __Signal__    __:__ "
         f"`%sms` \n"
         f"➾ __Uptime__ __:__ "
@@ -133,7 +133,7 @@ async def redis(pong):
     )
 
 
-@kyy_cmd(pattern="sinyal$")
+@fal_cmd(pattern="sinyal$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
@@ -150,7 +150,7 @@ async def redis(pong):
     duration = (end - start).microseconds / 1000
     user = await pong.client.get_me()
     await sinyal.edit(
-        f"**✨ ҡʏʏ-υѕєявσт ✨**\n\n"
+        f"**⚡𝐅𝐚𝐥-𝐔𝐬𝐞𝐫𝐛𝐨𝐭⚡**\n\n"
         f"** ▹  Sɪɢɴᴀʟ   :** "
         f"`%sms` \n"
         f"** ▹  Uᴘᴛɪᴍᴇ  :** "
@@ -159,14 +159,14 @@ async def redis(pong):
     )
 
 
-@kyy_cmd(pattern="ping$")
+@fal_cmd(pattern="ping$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
     start = datetime.now()
-    ping = await edit_or_reply(pong, "**✣**")
-    await ping.edit("**✣✣**")
-    await ping.edit("**✣✣✣**")
+    ping = await edit_or_reply(pong, "**✦**")
+    await ping.edit("**✧✦**")
+    await ping.edit("**✧✦✧**")
     end = datetime.now()
     duration = (end - start).microseconds / 1000
     await ping.edit(
@@ -178,7 +178,7 @@ async def pingme(pong):
     )
 
 
-@kyy_cmd(pattern="kecepatan$")
+@fal_cmd(pattern="kecepatan$")
 async def speedtst(spd):
     """For .speed command, use SpeedTest to check server speeds."""
     kecepatan = await edit_or_reply(spd, "**Sedang Menjalankan Tes Kecepatan Jaringan,Mohon Tunggu...**")
@@ -193,17 +193,17 @@ async def speedtst(spd):
     await kecepatan.edit(
         "**Kecepatan Jaringan:\n**"
         " ━━━━━━━━━━━━━━━━━ \n"
-        f"✧ **Dimulai Pada :**  \n"
+        f"❖ **Dimulai Pada :**  \n"
         f"`{result['timestamp']}` \n"
-        "✧ **Download:** "
+        "❖ **Download:** "
         f"`{speed_convert(result['download'])}` \n"
-        "✧ **Upload:** "
+        "❖ **Upload:** "
         f"`{speed_convert(result['upload'])}` \n"
-        "✧ **Signal:** "
+        "❖ **Signal:** "
         f"`{result['ping']}` \n"
-        "✧ **ISP:** "
+        "❖ **ISP:** "
         f"`{result['client']['isp']}` \n"
-        "✧ **BOT:** ✨ҡʏʏ-υѕєявσт✨"
+        "❖ **BOT:** ⚡𝐅𝐚𝐥-𝐔𝐬𝐞𝐫𝐛𝐨𝐭⚡"
     )
 
 
@@ -220,21 +220,21 @@ def speed_convert(size):
     return f"{round(size, 2)} {units[zero]}"
 
 
-@kyy_cmd(pattern="pong$")
+@fal_cmd(pattern="pong$")
 async def pingme(pong):
     """For .ping command, ping the userbot from any chat."""
     start = datetime.now()
     pong = await edit_or_reply(pong, "**◕‿- PONG!!🏓**")
     await asyncio.sleep(1)
-    await pong.edit("✨")
+    await pong.edit("⚡")
     await asyncio.sleep(2)
     end = datetime.now()
     duration = (end - start).microseconds / 9000
     user = await pong.client.get_me()
-    await pong.edit(f"**✨KyyName : [{user.first_name}](tg://user?id={user.id}) **\n📗 `%sms`" % (duration))
+    await pong.edit(f"**❖FalName : [{user.first_name}](tg://user?id={user.id}) **\n📗 `%sms`" % (duration))
 
 
-@kyy_cmd(pattern="pink$")
+@fal_cmd(pattern="pink$")
 async def redis(pong):
     """For .ping command, ping the userbot from any chat."""
     uptime = await get_readable_time((time.time() - StartTime))
