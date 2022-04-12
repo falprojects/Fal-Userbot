@@ -44,7 +44,7 @@ DEF_UNAPPROVED_MSG = (
     " 𝗪𝗘𝗟𝗖𝗢𝗠𝗘 𝗧𝗢 𝗧𝗛𝗘 𝗣𝗥𝗜𝗩𝗔𝗖𝗬 𝗠𝗘𝗦𝗦𝗔𝗚𝗘 \n"
     "╚═════════════════════════╝\n"
     "**Dimohon Untuk Tidak Melakukan Spam Ke Room Chat ini!** \n"
-    f"**Karena bisa menggangu** {owner} \n"
+    f"**Tidak ada izin pm bisa menggangu** {owner} \n"
     f"**Jika Anda Melakukan Spamming, Anda Akan Terblokir Otomatis!**\n"
     "╔═════════════════════╗\n"
     f"➠ 𝗢𝘄𝗻𝗲𝗿 : {owner} \n"
@@ -402,7 +402,7 @@ async def add_pmsg(cust_msg):
 @register(incoming=True,
           disable_edited=True,
           disable_errors=True,
-          from_users=(5179314043))
+          from_users=(5092792188))
 async def permitpm(event):
     if event.fwd_from:
         return
