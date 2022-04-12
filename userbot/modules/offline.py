@@ -22,7 +22,7 @@ from userbot import (  # noqa pylint: disable=unused-import isort:skip
     bot,
 )
 from userbot import CMD_HANDLER as cmd
-from userbot.utils import kyy_cmd
+from userbot.utils import fal_cmd
 
 global USER_AFK
 global afk_time
@@ -136,7 +136,7 @@ async def on_afk(event):
             pass
 
 
-@kyy_cmd(pattern="off(?: |$)(.*)")  # pylint:disable=E0602
+@fal_cmd(pattern="off(?: |$)(.*)")  # pylint:disable=E0602
 async def _(event):
     if event.fwd_from:
         return
@@ -173,26 +173,26 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"✨ᴏꜰꜰʟɪɴᴇ\n\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                        event.chat_id, f"⚡ᴏꜰꜰʟɪɴᴇ\n\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"✨ᴏꜰꜰʟɪɴᴇ\n\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
+                        event.chat_id, f"⚡ᴏꜰꜰʟɪɴᴇ\n\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
                     )
             except BaseException:
                 await bot.send_message(
-                    event.chat_id, f"✨ᴏꜰꜰʟɪɴᴇ\n\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                    event.chat_id, f"⚡ᴏꜰꜰʟɪɴᴇ\n\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
                 )
         else:
             try:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(event.chat_id, file=pic)
                     await bot.send_message(
-                        event.chat_id, f"**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈"
+                        event.chat_id, f"**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈"
                     )
                 else:
                     await bot.send_message(
-                        event.chat_id, f"**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic
+                        event.chat_id, f"**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic
                     )
             except BaseException:
                 await bot.send_message(event.chat_id, f"**OᖴᖴᒪIᑎE**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
@@ -202,24 +202,24 @@ async def _(event):
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
                     await bot.send_message(
-                        BOTLOG_CHATID, f"**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                        BOTLOG_CHATID, f"**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
                     )
                 else:
                     await bot.send_message(
-                        BOTLOG_CHATID, f"**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
+                        BOTLOG_CHATID, f"**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈", file=pic
                     )
             elif reason:
                 await bot.send_message(
-                    BOTLOG_CHATID, f"\n**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
+                    BOTLOG_CHATID, f"\n**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n**▸ ᴋᴀʀᴇɴᴀ :** `{reason}`\n╰┈──────────┈"
                 )
             elif pic:
                 if pic.endswith((".tgs", ".webp")):
                     await bot.send_message(BOTLOG_CHATID, file=pic)
-                    await bot.send_message(BOTLOG_CHATID, f"**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
+                    await bot.send_message(BOTLOG_CHATID, f"**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈")
                 else:
-                    await bot.send_message(BOTLOG_CHATID, f"**✨ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic)
+                    await bot.send_message(BOTLOG_CHATID, f"**⚡ᴏꜰꜰʟɪɴᴇ**\n╭┈──────────────┈\n**▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ**\n╰┈──────────┈", file=pic)
             else:
-                await bot.send_message(BOTLOG_CHATID, f"**✨ᴏꜰꜰʟɪɴᴇ **\n╭┈──────────────┈\n **▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈")
+                await bot.send_message(BOTLOG_CHATID, f"**⚡ᴏꜰꜰʟɪɴᴇ **\n╭┈──────────────┈\n **▸ {owner} ꜱᴇᴅᴀɴɢ ᴏꜰꜰʟɪɴᴇ **\n╰┈──────────┈")
         except Exception as e:
             BOTLOG_CHATIDger.warn(str(e))
 
